@@ -8,7 +8,6 @@ import 'package:homestay_raya/views/screens/registrationscreen.dart';
 import '../../models/user.dart';
 import '../shared/mainmenu.dart';
 
-
 class MainScreen extends StatefulWidget {
   final User user;
   const MainScreen({super.key, required this.user});
@@ -23,13 +22,13 @@ class _MainScreenState extends State<MainScreen> {
     return WillPopScope(
       onWillPop: () async => false,
       child: Scaffold(
-          appBar: AppBar(title: const Text("Buyer"), actions: [
+          appBar: AppBar(title: const Text("Homestay Raya"), actions: [
             IconButton(
                 onPressed: _registrationForm,
                 icon: const Icon(Icons.app_registration)),
             IconButton(onPressed: _loginForm, icon: const Icon(Icons.login)),
           ]),
-          body: const Center(child: Text("Buyer")),
+          body: const Center(child: Text("Homestay Raya")),
           drawer: MainMenuWidget(user: widget.user)),
     );
   }
